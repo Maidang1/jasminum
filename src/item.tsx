@@ -3,7 +3,7 @@ import { jasmines } from './data';
 import { useNavigate } from 'react-router-dom';
 
 export function Item({ id, single }: { id: string; single?: boolean }) {
-  const { name, shortDescription, fullDescription } =
+  const { name, shortDescription, fullDescription, imageUrl } =
     jasmines.find((item) => item.id === id) ?? {};
   const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ export function Item({ id, single }: { id: string; single?: boolean }) {
             className='card-image-container'
             layoutId={`card-image-container-${id}`}
             style={{
-              backgroundImage: `url(https://cn.bing.com/th?id=OHR.ArraialdoCabo_ZH-CN6202620711_UHD.jpg)`,
+              backgroundImage: `url(${imageUrl})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
@@ -48,20 +48,6 @@ export function Item({ id, single }: { id: string; single?: boolean }) {
               minHeight: '100%',
             }}
           >
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
-            {fullDescription}
             {fullDescription}
           </motion.div>
         </motion.div>

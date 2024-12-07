@@ -7,11 +7,13 @@ function Card({
   name,
   shortDescription,
   theme,
+  imageUrl,
 }: {
   id: string;
   name: string;
   shortDescription: string;
   theme: string;
+  imageUrl: string;
 }) {
   return (
     <li className={`card ${theme}`}>
@@ -21,7 +23,7 @@ function Card({
             className='card-image-container'
             layoutId={`card-image-container-${id}`}
             style={{
-              backgroundImage: `url(https://cn.bing.com/th?id=OHR.ArraialdoCabo_ZH-CN6202620711_UHD.jpg)`,
+              backgroundImage: `url(${imageUrl})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               height: 420,
